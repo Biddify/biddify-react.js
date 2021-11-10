@@ -1,1 +1,0 @@
-biddify-react.js
