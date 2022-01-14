@@ -12,21 +12,20 @@ function App() {
     const LOCAL_STORAGE_KEY = "products";
     const [products, setProducts] = useState([]);
 
-    //RetrieveProducts
     const retrieveProducts = async () => {
-        const response = await api.get('api/products')
+        const response = await api.get('/products')
 
         return response.data;
     }
 
     const addProductHandler = async (product) => {
-        const response = await api.post('api/products', product)
+        const response = await api.post('/products', product)
 
         setProducts([...products, response.data]);
     };
 
     const updateProductHandler = async (product) => {
-        const response = await api.put('api/products/'+ product.id, product);
+        const response = await api.put('/products/'+ product.id, product);
 
         console.log(response.data);
 
@@ -40,7 +39,7 @@ function App() {
     };
 
     const removeProductHandler = async (id) => {
-        await api.delete('api/products/'+ id);
+        await api.delete('/products/'+ id);
 
         const newListProduct = products.filter((product) => {
             return product.id !== id;
