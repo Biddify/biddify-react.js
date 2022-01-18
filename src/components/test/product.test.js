@@ -27,7 +27,7 @@ const data = [
 ];
 
 
-describe('server fetching tests', () => {
+describe('US-04 | Als verkoper, wil ik een product kunnen aanbieden, zodat ik deze kan verkopen', () => {
   afterEach(() => {
     jest.resetModules();
     jest.clearAllMocks();
