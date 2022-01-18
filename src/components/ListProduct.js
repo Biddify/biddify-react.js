@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import ContactCard from "./CardProduct";
 
 const ListProduct = (props) => {
-    console.log(props);
-
     const deleteProductHandler = (id) => {
         props.getProductId(id);
     };
